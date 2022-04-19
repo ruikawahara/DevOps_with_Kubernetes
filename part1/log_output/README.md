@@ -1,5 +1,11 @@
 # DevOps with K8s - Part 1
-## Ex 1.01: Getting started
+
+## *Table of Contents*
+---
+1. [Exercise 1.01: Getting Started](#101-getting-started)
+1. [Exercise 1.03: Declarative Approach](#102-declarative-approach)
+
+## 1.01: Getting Started
 ---
 
 ### **Objective**:
@@ -14,6 +20,7 @@ Once the app is done, deploy it into K8s cluster and confirm its results.
 
 *Note: This exercise will be used again in future exercise.*
 
+---
 
 ### **Solution**
 ---
@@ -39,7 +46,29 @@ kubectl get pods
 
 # see output
 kubectl logs -f stringtimestamp-dep-<result_of_get_pods>
-
-# (optional) stop your k3d cluster
-k3d cluster stop
 ```
+
+## 1.02: Declarative Approach
+---
+
+### **Objective**:
+---
+
+Create `manifests/deployment.yaml` and deploy using declarative approach. 
+
+Verify by restarting and following logs. 
+
+---
+### **Solution**
+---
+
+For implementation, refer to `manifests/deployment.yaml`.
+
+Once you're in this directory, run the following commands:
+
+``` bash
+# deploy using yaml
+kubectl apply -f manifests/deployment.yaml
+```
+
+*Note: Changed deployment name for ex 1.03. You may delete deployment from 1.01 at this point.*
