@@ -3,7 +3,7 @@
 ## *Table of Contents*
 ---
 1. [Exercise 1.01: Getting Started](#101-getting-started)
-1. [Exercise 1.03: Declarative Approach](#102-declarative-approach)
+1. [Exercise 1.03: Declarative Approach](#103-declarative-approach)
 
 ## 1.01: Getting Started
 ---
@@ -48,7 +48,7 @@ kubectl get pods
 kubectl logs -f stringtimestamp-dep-<result_of_get_pods>
 ```
 
-## 1.02: Declarative Approach
+## 1.03: Declarative Approach
 ---
 
 ### **Objective**:

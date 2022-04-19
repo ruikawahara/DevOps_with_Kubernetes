@@ -1,5 +1,9 @@
 # DevOps with K8s - Part 1
-## Ex 1.02: Project v0.1
+## *Table of Contents*
+---
+1. [Exercise 1.02: Project v0.1](#102-project-v01)
+
+## 1.02: Project v0.1
 ---
 
 ### **Objective**:
