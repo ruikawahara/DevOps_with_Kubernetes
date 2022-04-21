@@ -1,7 +1,9 @@
 # DevOps with K8s - Part 1
+
 ## *Table of Contents*
 ---
 1. [Exercise 1.02: Project v0.1](#102-project-v01)
+1. [Exercise 1.04: Project v0.2](#104-project-v02)
 
 ## 1.02: Project v0.1
 ---
@@ -14,6 +16,8 @@ Using any language(s)/framework(s), create a web server that will:
 - Deploy it into Kubernetes cluster
 
 *Note: Later exercises will be built off of this exercise.*
+
+---
 
 ### **Solution**
 ---
@@ -32,4 +36,29 @@ kubectl create deployment web-server-dep --image=ruikawahara/web_server
 # (optional) Check result
 kubectl get deployments
 kubectl logs -f <pod_name>
+```
+
+
+## 1.04: Project v0.2
+---
+
+### **Objective**:
+---
+
+Create a deployment.yaml for the project.
+
+---
+
+### **Solution**
+---
+
+Run the following commands:
+
+``` bash
+# Deploy using deployment.yaml in this directory
+kubectl apply -f manifests/deployment.yaml
+
+# Check you result
+kubectl get pods
+kubectl get deployments
 ```
