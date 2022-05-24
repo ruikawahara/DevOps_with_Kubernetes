@@ -106,4 +106,19 @@ docker run -p <any_available_port>:8000 <name>
 
 Since default port for this project is 8000, port 8000 in container maps to `<any_available_port>` in your host machine. You can check its result in `http://localhost:<any_available_port>/` while you are running the container.
 
-Now that it works on Docker, let's run this with K8s.
+Now that it works on Docker, let's run this with K8s. Since latest image should be pushed to my Docker Hub, following K8s commands should work:
+
+``` bash
+# run new image in k8s
+kubectl apply -f manifests/deployment.yaml
+
+# get pod. It should look something like: web-server-<hash1>-<hash2>
+kubectl get po
+
+# use port-forward to confirm that the proj works in the cluster
+kubectl port-forward <pod_name> <available_port>:8000
+```
+
+For my example, I used `kubectl port-forward <pod_name> 3003:8000` and checked its result in [http://localhost:3003/](http://localhost:3003/). 
+
+If your port is not 3003, use whatever port you used and modify url accordingly.
