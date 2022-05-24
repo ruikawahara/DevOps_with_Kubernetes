@@ -95,6 +95,15 @@ Use `kubectl port-forward` to confirm that the project is accessible and works i
 ### **Solution**
 ---
 
-
+If you wish to run this app through Docker, use the below command to see the behavior:
 ``` bash
+# build your docker image
+docker build -t <name> .
+
+# run your image
+docker run -p <any_available_port>:8000 <name>
 ```
+
+Since default port for this project is 8000, port 8000 in container maps to `<any_available_port>` in your host machine. You can check its result in `http://localhost:<any_available_port>/` while you are running the container.
+
+Now that it works on Docker, let's run this with K8s.
